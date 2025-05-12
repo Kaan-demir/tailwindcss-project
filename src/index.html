@@ -1,13 +1,272 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tagesschrift&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+
+
+    <div class="topbar h-10 flex items-center px-5 xl:px-0 hidden xl:block">
+
+        <div class=" container mx-auto flex items-center justify-between pt-1">
+
+            <!-- Topbar Contact Information Start -->
+
+            <ul class="flex gap-10 items-center">
+                <li class="hidden lg:block"><a href="tel:+902167065283"><i class="fa-solid fa-phone me-2"></i> 0552 437
+                        24 70</a></li>
+                <li class="text-[13px] sm:text-lg"><a href="mailto:vedatulker8@gmail.com"><i
+                            class="fa-solid fa-envelope me-2 sm:me-3"></i>terzimurat@gmail.com</a></li>
+
+            </ul>
+
+
+            <div class="">
+                <!-- Topbar Social Links Start -->
+                <div class="">
+                    <ul class="flex gap-6">
+                        <li>
+                            <button class="flex gap-1 sm:gap-3" data-bs-toggle="modal" data-bs-target="#languageModal">
+                                <img class="w-5 md:w-7" src="https://www.gognus.net/storage/files/3/Bayraklar/tr.svg"
+                                    alt="">
+                                <span class="text-[14px]">Turkish</span>
+                            </button>
+                        </li>
+                        <!-- <li class="hidden lg:block"><a href="https://www.facebook.com/fztvedatulker/"><i
+                                    class="fa-brands fa-facebook text-xl text-blue-700"></i></a>
+                        </li>
+                        <li class="hidden lg:block"><a href="https://www.youtube.com/@fztvedatulker"><i
+                                    class="fa-brands fa-youtube  text-xl text-red-500"></i></a>
+                        </li>
+                        <li class="hidden lg:block"><a
+                                href="https://www.linkedin.com/in/vedat-%C3%BClker/?originalSubdomain=tr"><i
+                                    class="fa-brands fa-linkedin  text-xl text-blue-700"></i></a></li>
+
+                        <li class="grid place-content-center hidden lg:block"><a
+                                href="https://twitter.com/vedatulker23"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-twitter-x"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                                </svg></a></li> -->
+                    </ul>
+                </div>
+                <!-- Topbar Social Links End -->
+            </div>
+        </div>
+
+    </div>
+
+    <header class="bg-black header">
+        <div class="flex justify-between lg:h-38 md:h-25 h-20 container mx-auto text-white items-center">
+            <div class="flex 2xl:gap-20 xl:gap-10">
+                <a href=""
+                    class="xl:text-5xl md:text-3xl t4 text-xl ms-5 xl:ms-0  bg-gradient-to-r from-red-600 to-white text-transparent bg-clip-text ">TERZİ
+                    MURAT</a>
+
+                <nav class="grid place-content-center hidden ">
+                    <ul class="flex 2xl:space-x-9 xl:space-x-4 navUl uppercase items-center">
+                        <li class="hover:text-amber-200  transition duration-500"><a href="">Product 1</a></li>
+                        <li class="relative group hover:text-amber-200  transition duration-500 mt-4">
+                            <a href="#">Product 2 <i class="fa-solid fa-chevron-down 2xl:pl-2 xl:pl-1 text-sm"></i></a>
+                            <div class="mb-4"></div>
+                            <ul class="absolute left-0 hidden group-hover:block bg-white shadow-lg p-2 rounded w-50">
+                                <li
+                                    class="py-1 px-2 text-black hover:text-red-700 hover:bg-gray-100 cursor-pointer font-medium">
+                                    Product 1</li>
+                                <li
+                                    class="py-1 px-2 text-black hover:text-red-700 hover:bg-gray-100 cursor-pointer font-medium">
+                                    Product 1</li>
+                                <li
+                                    class="py-1 px-2 text-black hover:text-red-700 hover:bg-gray-100 cursor-pointer font-medium">
+                                    Product 1</li>
+                            </ul>
+                        </li>
+                        <li class="hover:text-amber-200 transition duration-500"><a href="">Product 3</a></li>
+                        <li class="hover:text-amber-200  transition duration-500"><a href="">Product 4</a></li>
+                        <li class="hover:text-amber-200  transition duration-500"><a href="">Product 5</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="space-x-5 flex items-center">
+
+                <form id="searchBox"
+                    class="relative flex items-center border border-gray-700 rounded px-2 py-1 bg-gray-800 transition-all duration-300 group">
+                    <input id="searchInput" type="text" placeholder="Search..."
+                        class="w-48 transition-all duration-300  bg-transparent text-white outline-none overflow-hidden" />
+                    <i id="searchIcon" class="fa-solid fa-magnifying-glass cursor-pointer text-white "></i>
+                </form>
+
+                <div class="flex gap-3 items-center block">
+                    <button
+                        class="cursor-pointer border-1 border-black transition duration-200 outline-none hover:rounded hover:border-1 hover:border-gray-400 px-6 py-2 hidden">GİRİŞ YAP</button>
+                    <button
+                        class="rounded bg-red-600 hover:bg-red-500 transition duration-300 px-6 py-2 cursor-pointer">Üyelik</button> <button
+                        class="rounded bg-gray-300 text-black hover:bg-gray-400 transition duration-300 px-6 py-2 cursor-pointer">Sepet (0)</button>
+                </div>
+                <div class="hidden"><i class="fa-solid fa-bars me-5 "></i></div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <section class="fixed left-0  top-0 h-[100vh] bg-white shadow-2xl w-0 xl:w-8 transition-all duration-1000 rounded-br-2xl rounded-tr-2xl" id="productFilter" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;"> 
+        <div class="rounded-full w-6 h-6 xl:w-10 xl:h-10 bg-black absolute top-[50%] -right-7 xl:-right-5 cursor-pointer grid place-items-center border border-white transition-all duration-1000" id="filterArrow">
+            <i class="fa-solid fa-chevron-right transition-all duration-700 text-white text-[10px] xl:text-lg " id="arrowBtnFilter" ></i>
+        </div>
+    </section>
+
+
+
+
+    <section class="grid lg:flex  bg-black ">
+        <div class="flex-2 grid place-items-center mt-20 lg:ms-30 order-2 lg:order-1">
+            <div class="flex gap-10">
+                <img src="img/esarp1.jpg" class="w-40 h-40 lg:w-[300px] lg:h-[260px] xl:w-sm xl:h-100 object-cover">
+                <img src="img/esarp2.jpg" class="w-40 h-40 lg:w-[300px] lg:h-[260px] xl:w-sm xl:h-100 object-cover">
+            </div>
+            <div class="mb-40 text-center">
+                <h1 id="sentence" class="bg-gradient-to-r from-red-400 to-white text-transparent bg-clip-text w-50 lg:w-sm text-sm lg:text-xl h-15 font-extrabold mt-8"></h1>
+            </div>
+
+        </div>
+        <div class="flex-1 grid place-content-center lg:me-25 order-1 lg:order-2">
+            <img src="img/m2.jpg" class="w-[250px] lg:w-sm">
+        </div>
+
+    </section>
+
+
+    <section class="container mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 place-items-center space-y-7 p-10 ">
+        
+            <p class="h-100 p-10 bg-blue-800"></p>
+            <p class="h-100 p-10 bg-amber-800"></p>
+            <p class="h-100 p-10 bg-amber-400"></p>
+       
+  
+            <p class="h-100 p-10 bg-amber-400"></p>
+            <p class="h-100 p-10 bg-blue-800"></p>
+            <p class="h-100 p-10 bg-amber-800"></p>
+        
+
+    </div>
+    </section>
+
+
+<!-- 
+
+
+    <script>
+        const icon = document.getElementById('searchIcon');
+        const input = document.getElementById('searchInput');
+        const box = document.getElementById('searchBox');
+
+        // Tıklanınca aç
+        icon.addEventListener('click', () => {
+            input.classList.remove('w-0');
+            input.classList.add("w-20", "md:w-48");
+            input.focus();
+        });
+
+        // Fare kutunun dışına çıkınca kapat
+        box.addEventListener('mouseleave', () => {
+            input.classList.remove('w-48');
+            input.classList.add('w-0');
+        });
+    </script> -->
+
+
+<script>
+    let filter = false;
+    let filterArrow = document.getElementById("filterArrow");
+    let productFilter = document.getElementById("productFilter");
+    let arrowBtnFilter = document.getElementById("arrowBtnFilter");
+    filterArrow.addEventListener("click",()=>{
+        if(filter){
+            productFilter.classList.remove("xl:w-85","w-50");
+            productFilter.classList.add("xl:w-8", "w-0");
+            arrowBtnFilter.classList.remove("rotate-180");
+            filterArrow.classList.add("-right-7");
+            filterArrow.classList.remove("-right-3");
+
+            filter=false;
+          
+        }
+        else{
+            productFilter.classList.remove("xl:w-8", "w-0");
+            productFilter.classList.add("xl:w-85","w-50");
+            filterArrow.classList.remove("-right-7");
+            filterArrow.classList.add("-right-3");
+            arrowBtnFilter.classList.add("rotate-180");
+
+         
+            filter=true;
+        }
+     
+    })
+</script>
+
+
+
+
+
+
+<script>
+    var sentences = ["Eşarpta Stil, Kalite ve Güvenin Buluşma Noktası.", "15 Yıldır Şıklığın ve Zarafetin Yanındayız."];
+
+    var sentenceIndex = 0;
+    var currentSentence = '';
+    var sentenceElement = document.getElementById("sentence");
+
+    function typeWriter() {
+        if (sentenceIndex < sentences.length) {
+            currentSentence = sentences[sentenceIndex];
+            sentenceElement.innerHTML = '';
+
+            var i = 0;
+            var typingInterval = setInterval(function () {
+                sentenceElement.innerHTML += currentSentence.charAt(i);
+                i++;
+
+                if (i === currentSentence.length) {
+                    clearInterval(typingInterval);
+                    setTimeout(function () {
+                        sentenceElement.innerHTML = '';
+                        sentenceIndex++;
+                        if (sentenceIndex === sentences.length) {
+                            sentenceIndex = 0;
+                        }
+                        typeWriter();
+                    }, 2000);
+                }
+            }, 100);
+        }
+    }
+
+    typeWriter();</script>
+
+
+
+
+
 </body>
+
 </html>

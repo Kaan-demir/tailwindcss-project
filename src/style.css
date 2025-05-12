@@ -1,0 +1,23 @@
+:root{
+    
+        --font-figtree: "Figtree", sans-serif;
+        --font-openSans: "Open Sans", sans-serif;
+        --font-Tagesschrift:  "Tagesschrift", system-ui;
+      
+      }
+
+
+h1 {
+    font-family: var(--font-figtree);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    letter-spacing: 3px;
+    
+  }
+
+
+.header{
+    font-family: var(--font-figtree);
+    
+}
+
