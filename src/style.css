@@ -7,8 +7,11 @@
       }
 
 
+    h1,P,button {
+        font-family: var(--font-figtree);  
+      }
+
 h1 {
-    font-family: var(--font-figtree);
     font-optical-sizing: auto;
     font-weight: 700;
     letter-spacing: 3px;

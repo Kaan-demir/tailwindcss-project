@@ -5,23 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
-    <link href="./style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tagesschrift&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
 
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.80rem;
+  font-weight: bold;
+  color: #333;
+  animation: scroll-left 20s linear infinite;
+  position: relative;
+}
+
+.scroll-text::after {
+  content: attr(data-text);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+</style>
 <body>
+ 
 
-
-    <div class="topbar h-10 flex items-center px-5 xl:px-0 hidden xl:block">
+    <div class="topbar h-10 flex items-center px-5 xl:px-0">
 
         <div class=" container mx-auto flex items-center justify-between pt-1">
 
@@ -30,8 +62,16 @@
             <ul class="flex gap-10 items-center">
                 <li class="hidden lg:block"><a href="tel:+902167065283"><i class="fa-solid fa-phone me-2"></i> 0552 437
                         24 70</a></li>
-                <li class="text-[13px] sm:text-lg"><a href="mailto:vedatulker8@gmail.com"><i
-                            class="fa-solid fa-envelope me-2 sm:me-3"></i>terzimurat@gmail.com</a></li>
+                <li class="text-[13px] sm:text-lg w-[70vw] block lg:hidden">   <div class="scroll-container">
+                    <div class="scroll-text">
+                      TERZİ MURAT İLE EŞARPTA DOĞRU ADRES &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      15 YILLIK PROFESYONEL HİZMET &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      VİZYONUMUZ MÜŞTERİ MEMNUNİYETİ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      TERZİ MURAT İLE EŞARPTA DOĞRU ADRES &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      15 YILLIK PROFESYONEL HİZMET &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      VİZYONUMUZ MÜŞTERİ MEMNUNİYETİ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                  </div></li>
 
             </ul>
 
@@ -73,10 +113,10 @@
     </div>
 
     <header class="bg-black header">
-        <div class="flex justify-between lg:h-38 md:h-25 h-20 container mx-auto text-white items-center">
+        <div class="flex justify-between lg:h- md:h-25 h-15 container mx-auto text-white items-center">
             <div class="flex 2xl:gap-20 xl:gap-10">
                 <a href=""
-                    class="xl:text-5xl md:text-3xl t4 text-xl ms-5 xl:ms-0  bg-gradient-to-r from-red-600 to-white text-transparent bg-clip-text ">TERZİ
+                    class="xl:text-5xl md:text-3xl t4 text-xl ms-5 xl:ms-0  bg-gradient-to-r from-[navajowhite] to-white text-transparent bg-clip-text select-none ">TERZİ
                     MURAT</a>
 
                 <nav class="grid place-content-center hidden ">
@@ -107,7 +147,7 @@
             <div class="space-x-5 flex items-center">
 
                 <form id="searchBox"
-                    class="relative flex items-center border border-gray-700 rounded px-2 py-1 bg-gray-800 transition-all duration-300 group">
+                    class="hidden md:block relative flex items-center border border-gray-700 rounded px-2 py-1 bg-gray-800 transition-all duration-300 group">
                     <input id="searchInput" type="text" placeholder="Search..."
                         class="w-48 transition-all duration-300  bg-transparent text-white outline-none overflow-hidden" />
                     <i id="searchIcon" class="fa-solid fa-magnifying-glass cursor-pointer text-white "></i>
@@ -115,63 +155,641 @@
 
                 <div class="flex gap-3 items-center block">
                     <button
-                        class="cursor-pointer border-1 border-black transition duration-200 outline-none hover:rounded hover:border-1 hover:border-gray-400 px-6 py-2 hidden">GİRİŞ YAP</button>
+                        class="cursor-pointer border-1 border-black transition duration-200 outline-none hover:rounded hover:border-1 hover:border-gray-400 px-6 py-2 hidden">GİRİŞ
+                        YAP</button>
                     <button
-                        class="rounded bg-red-600 hover:bg-red-500 transition duration-300 px-6 py-2 cursor-pointer">Üyelik</button> <button
-                        class="rounded bg-gray-300 text-black hover:bg-gray-400 transition duration-300 px-6 py-2 cursor-pointer">Sepet (0)</button>
+                        class="rounded bg-red-600 hover:bg-red-500 transition duration-300 px-4 py-2 cursor-pointer text-[13px]">Üyelik</button>
+                    <button
+                        class="rounded bg-gray-300 text-black hover:bg-gray-400 transition duration-300 px-6 py-2 cursor-pointer hidden md:block text-[13px]">Sepet
+                        (0)</button>
+                        <button
+                        class="rounded bg-gray-300 text-black hover:bg-gray-400 transition duration-300 px-6 py-2 cursor-pointer block md:hidden "><img src="img/card.png" width="17"></button>
                 </div>
                 <div class="hidden"><i class="fa-solid fa-bars me-5 "></i></div>
             </div>
         </div>
     </header>
-
-
-
-    <section class="fixed left-0  top-0 h-[100vh] bg-white shadow-2xl w-0 xl:w-8 transition-all duration-1000 rounded-br-2xl rounded-tr-2xl" id="productFilter" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;"> 
-        <div class="rounded-full w-6 h-6 xl:w-10 xl:h-10 bg-black absolute top-[50%] -right-7 xl:-right-5 cursor-pointer grid place-items-center border border-white transition-all duration-1000" id="filterArrow">
-            <i class="fa-solid fa-chevron-right transition-all duration-700 text-white text-[10px] xl:text-lg " id="arrowBtnFilter" ></i>
-        </div>
-    </section>
-
-
-
-
-    <section class="grid lg:flex  bg-black ">
-        <div class="flex-2 grid place-items-center mt-20 lg:ms-30 order-2 lg:order-1">
-            <div class="flex gap-10">
-                <img src="img/esarp1.jpg" class="w-40 h-40 lg:w-[300px] lg:h-[260px] xl:w-sm xl:h-100 object-cover">
-                <img src="img/esarp2.jpg" class="w-40 h-40 lg:w-[300px] lg:h-[260px] xl:w-sm xl:h-100 object-cover">
-            </div>
-            <div class="mb-40 text-center">
-                <h1 id="sentence" class="bg-gradient-to-r from-red-400 to-white text-transparent bg-clip-text w-50 lg:w-sm text-sm lg:text-xl h-15 font-extrabold mt-8"></h1>
-            </div>
-
-        </div>
-        <div class="flex-1 grid place-content-center lg:me-25 order-1 lg:order-2">
-            <img src="img/m2.jpg" class="w-[250px] lg:w-sm">
-        </div>
-
-    </section>
-
-
-    <section class="container mx-auto">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 place-items-center space-y-7 p-10 ">
-        
-            <p class="h-100 p-10 bg-blue-800"></p>
-            <p class="h-100 p-10 bg-amber-800"></p>
-            <p class="h-100 p-10 bg-amber-400"></p>
-       
-  
-            <p class="h-100 p-10 bg-amber-400"></p>
-            <p class="h-100 p-10 bg-blue-800"></p>
-            <p class="h-100 p-10 bg-amber-800"></p>
-        
-
+    
+    <div class="h-11 bg-white text-center flex justify-center">
+      <div class="lg:max-w-[50vw] owlBanner owl-carousel owl-theme grid place-content-center " >
+        <p class="tracking-[3px] md:tracking-[5px] item capitalize" style="font-family: monospace; font-size: 12px;">2. Alışverişe Özel İndirim Kodu</p>
+        <p class="tracking-[3px] md:tracking-[5px] item" style="font-family: monospace; font-size: 12px;">2000 TL Üzeri Ücretsiz Kargo</p>  
+      </div>
     </div>
+    
+
+
+    <section
+        class="fixed left-0  top-0 h-[100vh] bg-white shadow-2xl w-0 xl:w-8 transition-all duration-1000 rounded-br-2xl rounded-tr-2xl z-10"
+        id="productFilter" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+        <div class="rounded-full w-6 h-6 xl:w-10 xl:h-10 bg-black absolute top-[50%] -right-7 xl:-right-5 cursor-pointer grid place-items-center border border-white transition-all duration-1000"
+            id="filterArrow">
+            <i class="fa-solid fa-chevron-right transition-all duration-700 text-white text-[10px] xl:text-lg "
+                id="arrowBtnFilter"></i>
+        </div>
     </section>
 
 
-<!-- 
+
+
+    <section class="flex flex-col items-center gap-10  bg-black  ">
+        <div class="flex md:flex  bg-black md:gap-50">
+        <div class="flex-2 flex flex-col items-center justify-center gap-10 order-1 md:order-1">
+            <div class="flex flex-col md:flex-row gap-10">
+                <!-- İlk Görsel -->
+                <div
+                  class="group relative overflow-hidden w-36 h-36 md:w-[205px] md:h-[220px] xl:w-[330px] xl:h-80 rounded-[40%_10%]"
+                  onmousemove="handleMouseMove(event, 'img1')"
+                  onmouseleave="resetPosition('img1')"
+                >
+                  <img
+                    id="img1"
+                    src="img/esarp1.jpg"
+                    class="w-full h-full object-cover transition-transform duration-1000 ease-in-out"
+                  />
+                </div>
+          
+                <!-- İkinci Görsel -->
+                <div
+                  class="group relative overflow-hidden w-36 h-36 md:w-[205px] md:h-[220px] xl:w-[330px] xl:h-80 rounded-[10%_40%]"
+                  onmousemove="handleMouseMove(event, 'img2')"
+                  onmouseleave="resetPosition('img2')"
+                >
+                  <img
+                    id="img2"
+                    src="img/esarp2.jpg"
+                    class="w-full h-full object-cover transition-transform duration-1000 ease-in-out"
+                  />
+                </div>
+              </div>
+              <div class="text-center hidden md:block">
+                <h1 class="bg-gradient-to-r from-[navajowhite] to-white text-transparent bg-clip-text w-50 lg:w-xl h-10 text-sm lg:text-sm font-extrabold select-none sentence"></h1>
+              </div>
+
+
+        </div>
+        <div class="flex-1 flex justify-center items-start md:-me-5  order-2 md:order-2 md:pb-15 mt-15">
+            <img src="img/m2.jpg" class=":w-[20vw] md:w-[20vw] lg:w-[12vw] me-10 m md:me-0 xl:-mt-10 xl:mb-6">
+        </div>
+        </div>
+        <div class="text-center block md:hidden">
+            <h1  class="bg-gradient-to-r from-[navajowhite] to-white text-transparent bg-clip-text w-70 lg:w-xl h-20 text-[13px] md:text-sm font-extrabold select-none sentence">
+            </h1>
+        </div>
+
+    </section>
+
+
+    <section class="container mx-auto mt-20">
+        <div class="grid grid-cols-2 lg:grid-cols-4 place-items-center space-y-10 px-5 gap-10 ">
+
+            
+       
+          <div class="min-h-[30vh]  bg-white w-[20vw] w-full">
+            <div class="flex justify-between">
+             <p class="text-center text-[9px] font-bold md:text-[11px] bg-[#4c9a9a] p-1 text-white">24 SAATTE<br>KARGODA</p> 
+            <div class="flex gap-3 justify-end items-center">
+             <img src="img/share.png" class="w-[20px] h-[20px] opacity-80">
+             <i class="fa-regular fa-heart fa-lg opacity-35"></i>
+            </div> 
+            </div> 
+            <div class="h-[35vh] w-[100%] my-3">
+            <img src="img/esarp3.jpg" alt="" class="w-[100%] h-[100%] object-contain"> 
+            </div> 
+            <div class="owl-carousel owl-theme bg-[#f9f9f9] text-center p-1 font-bold">
+              <p class="item text-[13px] mt-1 text-nowrap">KARGO BEDAVA</p>
+              <p class="item text-[13px] mt-1 text-nowrap">SEPETTE SÜPRİZ İNDİRİM</p>
+            </div> 
+            <div class="flex flex-col gap-3 justify-center items-center mt-2">
+             <p class="font-light text-[12px]">Fuşya Tivil Eşarp</p>
+             <div class="flex gap-8">
+               <p class="previousPrice line-through text-nowrap text-sm">1.599,00 TL</p>
+               <p class="currentPrice font-bold text-nowrap text-sm ">1.071,00 TL</p>
+             </div>
+             <p class="font-light text-[12px] px-3 py-1 rounded-sm  border border-1 border-green-700 text-green-800 text-nowrap">Sepetteki Fiyatı &nbsp;&nbsp; <span class="basketPrice font-extrabold">599,76 TL</span></p>
+             <div class=" hidden md:block flex flex-col md:flex-row  w-full gap-2 ">
+               <button class="flex-1 px-4 py-2 border border-2 border-[#4c9a9a] text-black rounded-sm cursor-pointer hover:bg-[#3b7878] hover:text-white transition-all duration-500  text-[15px] text-nowrap">Sepete Ekle</button>
+               <button class="flex-1 px-4 py-2 bg-green-700 text-white rounded-sm cursor-pointer hover:bg-green-800 transition-all duration-500 text-nowrap  ">Şimdi Al</button>
+             </div>
+            </div>
+           </div> 
+
+         
+           <div class="min-h-[30vh]  bg-white w-[20vw] w-full">
+            <div class="flex justify-between">
+             <p class="text-center text-[9px] font-bold md:text-[11px] bg-[#4c9a9a] p-1 text-white">24 SAATTE<br>KARGODA</p> 
+            <div class="flex gap-3 justify-end items-center">
+             <img src="img/share.png" class="w-[20px] h-[20px] opacity-80">
+             <i class="fa-regular fa-heart fa-lg opacity-35"></i>
+            </div> 
+            </div> 
+            <div class="h-[35vh] w-[100%] my-3">
+            <img src="img/esarp5.jpg" alt="" class="w-[100%] h-[100%] object-contain"> 
+            </div> 
+            <div class="owl-carousel owl-theme bg-[#f9f9f9] text-center p-1 font-bold">
+              <p class="item text-[13px] mt-1 text-nowrap">KARGO BEDAVA</p>
+              <p class="item text-[13px] mt-1 text-nowrap">SEPETTE SÜPRİZ İNDİRİM</p>
+            </div> 
+            <div class="flex flex-col gap-3 justify-center items-center mt-2">
+             <p class="font-light text-[12px]">Fuşya Tivil Eşarp</p>
+             <div class="flex gap-8">
+               <p class="previousPrice line-through text-nowrap text-sm">1.599,00 TL</p>
+               <p class="currentPrice font-bold text-nowrap text-sm ">1.071,00 TL</p>
+             </div>
+             <p class="font-light text-[12px] px-3 py-1 rounded-sm  border border-1 border-green-700 text-green-800 text-nowrap">Sepetteki Fiyatı &nbsp;&nbsp; <span class="basketPrice font-extrabold">599,76 TL</span></p>
+             <div class=" hidden md:block flex flex-col md:flex-row  w-full gap-2 ">
+               <button class="flex-1 px-4 py-2 border border-2 border-[#4c9a9a] text-black rounded-sm cursor-pointer hover:bg-[#3b7878] hover:text-white transition-all duration-500  text-[15px] text-nowrap">Sepete Ekle</button>
+               <button class="flex-1 px-4 py-2 bg-green-700 text-white rounded-sm cursor-pointer hover:bg-green-800 transition-all duration-500 text-nowrap  ">Şimdi Al</button>
+             </div>
+            </div>
+           </div> 
+
+           <div class="min-h-[30vh]  bg-white w-[20vw] w-full">
+            <div class="flex justify-between">
+             <p class="text-center text-[9px] font-bold md:text-[11px] bg-[#4c9a9a] p-1 text-white">24 SAATTE<br>KARGODA</p> 
+            <div class="flex gap-3 justify-end items-center">
+             <img src="img/share.png" class="w-[20px] h-[20px] opacity-80">
+             <i class="fa-regular fa-heart fa-lg opacity-35"></i>
+            </div> 
+            </div> 
+            <div class="h-[35vh] w-[100%] my-3">
+            <img src="img/esarp3.jpg" alt="" class="w-[100%] h-[100%] object-contain"> 
+            </div> 
+            <div class="owl-carousel owl-theme bg-[#f9f9f9] text-center p-1 font-bold">
+              <p class="item text-[13px] mt-1 text-nowrap">KARGO BEDAVA</p>
+              <p class="item text-[13px] mt-1 text-nowrap">SEPETTE SÜPRİZ İNDİRİM</p>
+            </div> 
+            <div class="flex flex-col gap-3 justify-center items-center mt-2">
+             <p class="font-light text-[12px]">Fuşya Tivil Eşarp</p>
+             <div class="flex gap-8">
+               <p class="previousPrice line-through text-nowrap text-sm">1.599,00 TL</p>
+               <p class="currentPrice font-bold text-nowrap text-sm ">1.071,00 TL</p>
+             </div>
+             <p class="font-light text-[12px] px-3 py-1 rounded-sm  border border-1 border-green-700 text-green-800 text-nowrap">Sepetteki Fiyatı &nbsp;&nbsp; <span class="basketPrice font-extrabold">599,76 TL</span></p>
+             <div class=" hidden md:block flex flex-col md:flex-row  w-full gap-2 ">
+               <button class="flex-1 px-4 py-2 border border-2 border-[#4c9a9a] text-black rounded-sm cursor-pointer hover:bg-[#3b7878] hover:text-white transition-all duration-500  text-[15px] text-nowrap">Sepete Ekle</button>
+               <button class="flex-1 px-4 py-2 bg-green-700 text-white rounded-sm cursor-pointer hover:bg-green-800 transition-all duration-500 text-nowrap  ">Şimdi Al</button>
+             </div>
+            </div>
+           </div> 
+
+  
+           <div class="min-h-[30vh]  bg-white w-[20vw] w-full">
+            <div class="flex justify-between">
+             <p class="text-center text-[9px] font-bold md:text-[11px] bg-[#4c9a9a] p-1 text-white">24 SAATTE<br>KARGODA</p> 
+            <div class="flex gap-3 justify-end items-center">
+             <img src="img/share.png" class="w-[20px] h-[20px] opacity-80">
+             <i class="fa-regular fa-heart fa-lg opacity-35"></i>
+            </div> 
+            </div> 
+            <div class="h-[35vh] w-[100%] my-3">
+            <img src="img/esarp6.jpg" alt="" class="w-[100%] h-[100%] object-contain"> 
+            </div> 
+            <div class="owl-carousel owl-theme bg-[#f9f9f9] text-center p-1 font-bold">
+              <p class="item text-[13px] mt-1 text-nowrap">KARGO BEDAVA</p>
+              <p class="item text-[13px] mt-1 text-nowrap">SEPETTE SÜPRİZ İNDİRİM</p>
+            </div> 
+            <div class="flex flex-col gap-3 justify-center items-center mt-2">
+             <p class="font-light text-[12px]">Fuşya Tivil Eşarp</p>
+             <div class="flex gap-8">
+               <p class="previousPrice line-through text-nowrap text-sm">1.599,00 TL</p>
+               <p class="currentPrice font-bold text-nowrap text-sm ">1.071,00 TL</p>
+             </div>
+             <p class="font-light text-[12px] px-3 py-1 rounded-sm  border border-1 border-green-700 text-green-800 text-nowrap">Sepetteki Fiyatı &nbsp;&nbsp; <span class="basketPrice font-extrabold">599,76 TL</span></p>
+             <div class=" hidden md:block flex flex-col md:flex-row  w-full gap-2 ">
+               <button class="flex-1 px-4 py-2 border border-2 border-[#4c9a9a] text-black rounded-sm cursor-pointer hover:bg-[#3b7878] hover:text-white transition-all duration-500  text-[15px] text-nowrap">Sepete Ekle</button>
+               <button class="flex-1 px-4 py-2 bg-green-700 text-white rounded-sm cursor-pointer hover:bg-green-800 transition-all duration-500 text-nowrap  ">Şimdi Al</button>
+             </div>
+            </div>
+           </div> 
+
+           <div class="min-h-[30vh]  bg-white w-[20vw] w-full">
+            <div class="flex justify-between">
+             <p class="text-center text-[9px] font-bold md:text-[11px] bg-[#4c9a9a] p-1 text-white">24 SAATTE<br>KARGODA</p> 
+            <div class="flex gap-3 justify-end items-center">
+             <img src="img/share.png" class="w-[20px] h-[20px] opacity-80">
+             <i class="fa-regular fa-heart fa-lg opacity-35"></i>
+            </div> 
+            </div> 
+            <div class="h-[35vh] w-[100%] my-3">
+            <img src="img/esarp3.jpg" alt="" class="w-[100%] h-[100%] object-contain"> 
+            </div> 
+            <div class="owl-carousel owl-theme bg-[#f9f9f9] text-center p-1 font-bold">
+              <p class="item text-[13px] mt-1 text-nowrap">KARGO BEDAVA</p>
+              <p class="item text-[13px] mt-1 text-nowrap">SEPETTE SÜPRİZ İNDİRİM</p>
+            </div> 
+            <div class="flex flex-col gap-3 justify-center items-center mt-2">
+             <p class="font-light text-[12px]">Fuşya Tivil Eşarp</p>
+             <div class="flex gap-8">
+               <p class="previousPrice line-through text-nowrap text-sm">1.599,00 TL</p>
+               <p class="currentPrice font-bold text-nowrap text-sm ">1.071,00 TL</p>
+             </div>
+             <p class="font-light text-[12px] px-3 py-1 rounded-sm  border border-1 border-green-700 text-green-800 text-nowrap">Sepetteki Fiyatı &nbsp;&nbsp; <span class="basketPrice font-extrabold">599,76 TL</span></p>
+             <div class=" hidden md:block flex flex-col md:flex-row  w-full gap-2 ">
+               <button class="flex-1 px-4 py-2 border border-2 border-[#4c9a9a] text-black rounded-sm cursor-pointer hover:bg-[#3b7878] hover:text-white transition-all duration-500  text-[15px] text-nowrap">Sepete Ekle</button>
+               <button class="flex-1 px-4 py-2 bg-green-700 text-white rounded-sm cursor-pointer hover:bg-green-800 transition-all duration-500 text-nowrap  ">Şimdi Al</button>
+             </div>
+            </div>
+           </div> 
+
+         
+           <div class="min-h-[30vh]  bg-white w-[20vw] w-full">
+            <div class="flex justify-between">
+             <p class="text-center text-[9px] font-bold md:text-[11px] bg-[#4c9a9a] p-1 text-white">24 SAATTE<br>KARGODA</p> 
+            <div class="flex gap-3 justify-end items-center">
+             <img src="img/share.png" class="w-[20px] h-[20px] opacity-80">
+             <i class="fa-regular fa-heart fa-lg opacity-35"></i>
+            </div> 
+            </div> 
+            <div class="h-[35vh] w-[100%] my-3">
+            <img src="img/esarp5.jpg" alt="" class="w-[100%] h-[100%] object-contain"> 
+            </div> 
+            <div class="owl-carousel owl-theme bg-[#f9f9f9] text-center p-1 font-bold">
+              <p class="item text-[13px] mt-1 text-nowrap">KARGO BEDAVA</p>
+              <p class="item text-[13px] mt-1 text-nowrap">SEPETTE SÜPRİZ İNDİRİM</p>
+            </div> 
+            <div class="flex flex-col gap-3 justify-center items-center mt-2">
+             <p class="font-light text-[12px]">Fuşya Tivil Eşarp</p>
+             <div class="flex gap-8">
+               <p class="previousPrice line-through text-nowrap text-sm">1.599,00 TL</p>
+               <p class="currentPrice font-bold text-nowrap text-sm ">1.071,00 TL</p>
+             </div>
+             <p class="font-light text-[12px] px-3 py-1 rounded-sm  border border-1 border-green-700 text-green-800 text-nowrap">Sepetteki Fiyatı &nbsp;&nbsp; <span class="basketPrice font-extrabold">599,76 TL</span></p>
+             <div class=" hidden md:block flex flex-col md:flex-row  w-full gap-2 ">
+               <button class="flex-1 px-4 py-2 border border-2 border-[#4c9a9a] text-black rounded-sm cursor-pointer hover:bg-[#3b7878] hover:text-white transition-all duration-500  text-[15px] text-nowrap">Sepete Ekle</button>
+               <button class="flex-1 px-4 py-2 bg-green-700 text-white rounded-sm cursor-pointer hover:bg-green-800 transition-all duration-500 text-nowrap  ">Şimdi Al</button>
+             </div>
+            </div>
+           </div> 
+
+           <div class="min-h-[30vh]  bg-white w-[20vw] w-full">
+            <div class="flex justify-between">
+             <p class="text-center text-[9px] font-bold md:text-[11px] bg-[#4c9a9a] p-1 text-white">24 SAATTE<br>KARGODA</p> 
+            <div class="flex gap-3 justify-end items-center">
+             <img src="img/share.png" class="w-[20px] h-[20px] opacity-80">
+             <i class="fa-regular fa-heart fa-lg opacity-35"></i>
+            </div> 
+            </div> 
+            <div class="h-[35vh] w-[100%] my-3">
+            <img src="img/esarp3.jpg" alt="" class="w-[100%] h-[100%] object-contain"> 
+            </div> 
+            <div class="owl-carousel owl-theme bg-[#f9f9f9] text-center p-1 font-bold">
+              <p class="item text-[13px] mt-1 text-nowrap">KARGO BEDAVA</p>
+              <p class="item text-[13px] mt-1 text-nowrap">SEPETTE SÜPRİZ İNDİRİM</p>
+            </div> 
+            <div class="flex flex-col gap-3 justify-center items-center mt-2">
+             <p class="font-light text-[12px]">Fuşya Tivil Eşarp</p>
+             <div class="flex gap-8">
+               <p class="previousPrice line-through text-nowrap text-sm">1.599,00 TL</p>
+               <p class="currentPrice font-bold text-nowrap text-sm ">1.071,00 TL</p>
+             </div>
+             <p class="font-light text-[12px] px-3 py-1 rounded-sm  border border-1 border-green-700 text-green-800 text-nowrap">Sepetteki Fiyatı &nbsp;&nbsp; <span class="basketPrice font-extrabold">599,76 TL</span></p>
+             <div class=" hidden md:block flex flex-col md:flex-row  w-full gap-2 ">
+               <button class="flex-1 px-4 py-2 border border-2 border-[#4c9a9a] text-black rounded-sm cursor-pointer hover:bg-[#3b7878] hover:text-white transition-all duration-500  text-[15px] text-nowrap">Sepete Ekle</button>
+               <button class="flex-1 px-4 py-2 bg-green-700 text-white rounded-sm cursor-pointer hover:bg-green-800 transition-all duration-500 text-nowrap  ">Şimdi Al</button>
+             </div>
+            </div>
+           </div> 
+
+  
+           <div class="min-h-[30vh]  bg-white w-[20vw] w-full">
+            <div class="flex justify-between">
+             <p class="text-center text-[9px] font-bold md:text-[11px] bg-[#4c9a9a] p-1 text-white">24 SAATTE<br>KARGODA</p> 
+            <div class="flex gap-3 justify-end items-center">
+             <img src="img/share.png" class="w-[20px] h-[20px] opacity-80">
+             <i class="fa-regular fa-heart fa-lg opacity-35"></i>
+            </div> 
+            </div> 
+            <div class="h-[35vh] w-[100%] my-3">
+            <img src="img/esarp6.jpg" alt="" class="w-[100%] h-[100%] object-contain"> 
+            </div> 
+            <div class="owl-carousel owl-theme bg-[#f9f9f9] text-center p-1 font-bold">
+              <p class="item text-[13px] mt-1 text-nowrap">KARGO BEDAVA</p>
+              <p class="item text-[13px] mt-1 text-nowrap">SEPETTE SÜPRİZ İNDİRİM</p>
+            </div> 
+            <div class="flex flex-col gap-3 justify-center items-center mt-2">
+             <p class="font-light text-[12px]">Fuşya Tivil Eşarp</p>
+             <div class="flex gap-8">
+               <p class="previousPrice line-through text-nowrap text-sm">1.599,00 TL</p>
+               <p class="currentPrice font-bold text-nowrap text-sm ">1.071,00 TL</p>
+             </div>
+             <p class="font-light text-[12px] px-3 py-1 rounded-sm  border border-1 border-green-700 text-green-800 text-nowrap">Sepetteki Fiyatı &nbsp;&nbsp; <span class="basketPrice font-extrabold">599,76 TL</span></p>
+             <div class=" hidden md:block flex flex-col md:flex-row  w-full gap-2 ">
+               <button class="flex-1 px-4 py-2 border border-2 border-[#4c9a9a] text-black rounded-sm cursor-pointer hover:bg-[#3b7878] hover:text-white transition-all duration-500  text-[15px] text-nowrap">Sepete Ekle</button>
+               <button class="flex-1 px-4 py-2 bg-green-700 text-white rounded-sm cursor-pointer hover:bg-green-800 transition-all duration-500 text-nowrap  ">Şimdi Al</button>
+             </div>
+            </div>
+           </div> 
+           <div class="min-h-[30vh]  bg-white w-[20vw] w-full">
+            <div class="flex justify-between">
+             <p class="text-center text-[9px] font-bold md:text-[11px] bg-[#4c9a9a] p-1 text-white">24 SAATTE<br>KARGODA</p> 
+            <div class="flex gap-3 justify-end items-center">
+             <img src="img/share.png" class="w-[20px] h-[20px] opacity-80">
+             <i class="fa-regular fa-heart fa-lg opacity-35"></i>
+            </div> 
+            </div> 
+            <div class="h-[35vh] w-[100%] my-3">
+            <img src="img/esarp3.jpg" alt="" class="w-[100%] h-[100%] object-contain"> 
+            </div> 
+            <div class="owl-carousel owl-theme bg-[#f9f9f9] text-center p-1 font-bold">
+              <p class="item text-[13px] mt-1 text-nowrap">KARGO BEDAVA</p>
+              <p class="item text-[13px] mt-1 text-nowrap">SEPETTE SÜPRİZ İNDİRİM</p>
+            </div> 
+            <div class="flex flex-col gap-3 justify-center items-center mt-2">
+             <p class="font-light text-[12px]">Fuşya Tivil Eşarp</p>
+             <div class="flex gap-8">
+               <p class="previousPrice line-through text-nowrap text-sm">1.599,00 TL</p>
+               <p class="currentPrice font-bold text-nowrap text-sm ">1.071,00 TL</p>
+             </div>
+             <p class="font-light text-[12px] px-3 py-1 rounded-sm  border border-1 border-green-700 text-green-800 text-nowrap">Sepetteki Fiyatı &nbsp;&nbsp; <span class="basketPrice font-extrabold">599,76 TL</span></p>
+             <div class=" hidden md:block flex flex-col md:flex-row  w-full gap-2 ">
+               <button class="flex-1 px-4 py-2 border border-2 border-[#4c9a9a] text-black rounded-sm cursor-pointer hover:bg-[#3b7878] hover:text-white transition-all duration-500  text-[15px] text-nowrap">Sepete Ekle</button>
+               <button class="flex-1 px-4 py-2 bg-green-700 text-white rounded-sm cursor-pointer hover:bg-green-800 transition-all duration-500 text-nowrap  ">Şimdi Al</button>
+             </div>
+            </div>
+           </div> 
+
+         
+           <div class="min-h-[30vh]  bg-white w-[20vw] w-full">
+            <div class="flex justify-between">
+             <p class="text-center text-[9px] font-bold md:text-[11px] bg-[#4c9a9a] p-1 text-white">24 SAATTE<br>KARGODA</p> 
+            <div class="flex gap-3 justify-end items-center">
+             <img src="img/share.png" class="w-[20px] h-[20px] opacity-80">
+             <i class="fa-regular fa-heart fa-lg opacity-35"></i>
+            </div> 
+            </div> 
+            <div class="h-[35vh] w-[100%] my-3">
+            <img src="img/esarp5.jpg" alt="" class="w-[100%] h-[100%] object-contain"> 
+            </div> 
+            <div class="owl-carousel owl-theme bg-[#f9f9f9] text-center p-1 font-bold">
+              <p class="item text-[13px] mt-1 text-nowrap">KARGO BEDAVA</p>
+              <p class="item text-[13px] mt-1 text-nowrap">SEPETTE SÜPRİZ İNDİRİM</p>
+            </div> 
+            <div class="flex flex-col gap-3 justify-center items-center mt-2">
+             <p class="font-light text-[12px]">Fuşya Tivil Eşarp</p>
+             <div class="flex gap-8">
+               <p class="previousPrice line-through text-nowrap text-sm">1.599,00 TL</p>
+               <p class="currentPrice font-bold text-nowrap text-sm ">1.071,00 TL</p>
+             </div>
+             <p class="font-light text-[12px] px-3 py-1 rounded-sm  border border-1 border-green-700 text-green-800 text-nowrap">Sepetteki Fiyatı &nbsp;&nbsp; <span class="basketPrice font-extrabold">599,76 TL</span></p>
+             <div class=" hidden md:block flex flex-col md:flex-row  w-full gap-2 ">
+               <button class="flex-1 px-4 py-2 border border-2 border-[#4c9a9a] text-black rounded-sm cursor-pointer hover:bg-[#3b7878] hover:text-white transition-all duration-500  text-[15px] text-nowrap">Sepete Ekle</button>
+               <button class="flex-1 px-4 py-2 bg-green-700 text-white rounded-sm cursor-pointer hover:bg-green-800 transition-all duration-500 text-nowrap  ">Şimdi Al</button>
+             </div>
+            </div>
+           </div> 
+
+           <div class="min-h-[30vh]  bg-white w-[20vw] w-full">
+            <div class="flex justify-between">
+             <p class="text-center text-[9px] font-bold md:text-[11px] bg-[#4c9a9a] p-1 text-white">24 SAATTE<br>KARGODA</p> 
+            <div class="flex gap-3 justify-end items-center">
+             <img src="img/share.png" class="w-[20px] h-[20px] opacity-80">
+             <i class="fa-regular fa-heart fa-lg opacity-35"></i>
+            </div> 
+            </div> 
+            <div class="h-[35vh] w-[100%] my-3">
+            <img src="img/esarp3.jpg" alt="" class="w-[100%] h-[100%] object-contain"> 
+            </div> 
+            <div class="owl-carousel owl-theme bg-[#f9f9f9] text-center p-1 font-bold">
+              <p class="item text-[13px] mt-1 text-nowrap">KARGO BEDAVA</p>
+              <p class="item text-[13px] mt-1 text-nowrap">SEPETTE SÜPRİZ İNDİRİM</p>
+            </div> 
+            <div class="flex flex-col gap-3 justify-center items-center mt-2">
+             <p class="font-light text-[12px]">Fuşya Tivil Eşarp</p>
+             <div class="flex gap-8">
+               <p class="previousPrice line-through text-nowrap text-sm">1.599,00 TL</p>
+               <p class="currentPrice font-bold text-nowrap text-sm ">1.071,00 TL</p>
+             </div>
+             <p class="font-light text-[12px] px-3 py-1 rounded-sm  border border-1 border-green-700 text-green-800 text-nowrap">Sepetteki Fiyatı &nbsp;&nbsp; <span class="basketPrice font-extrabold">599,76 TL</span></p>
+             <div class=" hidden md:block flex flex-col md:flex-row  w-full gap-2 ">
+               <button class="flex-1 px-4 py-2 border border-2 border-[#4c9a9a] text-black rounded-sm cursor-pointer hover:bg-[#3b7878] hover:text-white transition-all duration-500  text-[15px] text-nowrap">Sepete Ekle</button>
+               <button class="flex-1 px-4 py-2 bg-green-700 text-white rounded-sm cursor-pointer hover:bg-green-800 transition-all duration-500 text-nowrap  ">Şimdi Al</button>
+             </div>
+            </div>
+           </div> 
+
+  
+           <div class="min-h-[30vh]  bg-white w-[20vw] w-full">
+            <div class="flex justify-between">
+             <p class="text-center text-[9px] font-bold md:text-[11px] bg-[#4c9a9a] p-1 text-white">24 SAATTE<br>KARGODA</p> 
+            <div class="flex gap-3 justify-end items-center">
+             <img src="img/share.png" class="w-[20px] h-[20px] opacity-80">
+             <i class="fa-regular fa-heart fa-lg opacity-35"></i>
+            </div> 
+            </div> 
+            <div class="h-[35vh] w-[100%] my-3">
+            <img src="img/esarp6.jpg" alt="" class="w-[100%] h-[100%] object-contain"> 
+            </div> 
+            <div class="owl-carousel owl-theme bg-[#f9f9f9] text-center p-1 font-bold">
+              <p class="item text-[13px] mt-1 text-nowrap">KARGO BEDAVA</p>
+              <p class="item text-[13px] mt-1 text-nowrap">SEPETTE SÜPRİZ İNDİRİM</p>
+            </div> 
+            <div class="flex flex-col gap-3 justify-center items-center mt-2">
+             <p class="font-light text-[12px]">Fuşya Tivil Eşarp</p>
+             <div class="flex gap-8">
+               <p class="previousPrice line-through text-nowrap text-sm">1.599,00 TL</p>
+               <p class="currentPrice font-bold text-nowrap text-sm ">1.071,00 TL</p>
+             </div>
+             <p class="font-light text-[12px] px-3 py-1 rounded-sm  border border-1 border-green-700 text-green-800 text-nowrap">Sepetteki Fiyatı &nbsp;&nbsp; <span class="basketPrice font-extrabold">599,76 TL</span></p>
+             <div class=" hidden md:block flex flex-col md:flex-row  w-full gap-2 ">
+               <button class="flex-1 px-4 py-2 border border-2 border-[#4c9a9a] text-black rounded-sm cursor-pointer hover:bg-[#3b7878] hover:text-white transition-all duration-500  text-[15px] text-nowrap">Sepete Ekle</button>
+               <button class="flex-1 px-4 py-2 bg-green-700 text-white rounded-sm cursor-pointer hover:bg-green-800 transition-all duration-500 text-nowrap  ">Şimdi Al</button>
+             </div>
+            </div>
+           </div> 
+           <div class="min-h-[30vh]  bg-white w-[20vw] w-full">
+            <div class="flex justify-between">
+             <p class="text-center text-[9px] font-bold md:text-[11px] bg-[#4c9a9a] p-1 text-white">24 SAATTE<br>KARGODA</p> 
+            <div class="flex gap-3 justify-end items-center">
+             <img src="img/share.png" class="w-[20px] h-[20px] opacity-80">
+             <i class="fa-regular fa-heart fa-lg opacity-35"></i>
+            </div> 
+            </div> 
+            <div class="h-[35vh] w-[100%] my-3">
+            <img src="img/esarp3.jpg" alt="" class="w-[100%] h-[100%] object-contain"> 
+            </div> 
+            <div class="owl-carousel owl-theme bg-[#f9f9f9] text-center p-1 font-bold">
+              <p class="item text-[13px] mt-1 text-nowrap">KARGO BEDAVA</p>
+              <p class="item text-[13px] mt-1 text-nowrap">SEPETTE SÜPRİZ İNDİRİM</p>
+            </div> 
+            <div class="flex flex-col gap-3 justify-center items-center mt-2">
+             <p class="font-light text-[12px]">Fuşya Tivil Eşarp</p>
+             <div class="flex gap-8">
+               <p class="previousPrice line-through text-nowrap text-sm">1.599,00 TL</p>
+               <p class="currentPrice font-bold text-nowrap text-sm ">1.071,00 TL</p>
+             </div>
+             <p class="font-light text-[12px] px-3 py-1 rounded-sm  border border-1 border-green-700 text-green-800 text-nowrap">Sepetteki Fiyatı &nbsp;&nbsp; <span class="basketPrice font-extrabold">599,76 TL</span></p>
+             <div class=" hidden md:block flex flex-col md:flex-row  w-full gap-2 ">
+               <button class="flex-1 px-4 py-2 border border-2 border-[#4c9a9a] text-black rounded-sm cursor-pointer hover:bg-[#3b7878] hover:text-white transition-all duration-500  text-[15px] text-nowrap">Sepete Ekle</button>
+               <button class="flex-1 px-4 py-2 bg-green-700 text-white rounded-sm cursor-pointer hover:bg-green-800 transition-all duration-500 text-nowrap  ">Şimdi Al</button>
+             </div>
+            </div>
+           </div> 
+
+         
+           <div class="min-h-[30vh]  bg-white w-[20vw] w-full">
+            <div class="flex justify-between">
+             <p class="text-center text-[9px] font-bold md:text-[11px] bg-[#4c9a9a] p-1 text-white">24 SAATTE<br>KARGODA</p> 
+            <div class="flex gap-3 justify-end items-center">
+             <img src="img/share.png" class="w-[20px] h-[20px] opacity-80">
+             <i class="fa-regular fa-heart fa-lg opacity-35"></i>
+            </div> 
+            </div> 
+            <div class="h-[35vh] w-[100%] my-3">
+            <img src="img/esarp5.jpg" alt="" class="w-[100%] h-[100%] object-contain"> 
+            </div> 
+            <div class="owl-carousel owl-theme bg-[#f9f9f9] text-center p-1 font-bold">
+              <p class="item text-[13px] mt-1 text-nowrap">KARGO BEDAVA</p>
+              <p class="item text-[13px] mt-1 text-nowrap">SEPETTE SÜPRİZ İNDİRİM</p>
+            </div> 
+            <div class="flex flex-col gap-3 justify-center items-center mt-2">
+             <p class="font-light text-[12px]">Fuşya Tivil Eşarp</p>
+             <div class="flex gap-8">
+               <p class="previousPrice line-through text-nowrap text-sm">1.599,00 TL</p>
+               <p class="currentPrice font-bold text-nowrap text-sm ">1.071,00 TL</p>
+             </div>
+             <p class="font-light text-[12px] px-3 py-1 rounded-sm  border border-1 border-green-700 text-green-800 text-nowrap">Sepetteki Fiyatı &nbsp;&nbsp; <span class="basketPrice font-extrabold">599,76 TL</span></p>
+             <div class=" hidden md:block flex flex-col md:flex-row  w-full gap-2 ">
+               <button class="flex-1 px-4 py-2 border border-2 border-[#4c9a9a] text-black rounded-sm cursor-pointer hover:bg-[#3b7878] hover:text-white transition-all duration-500  text-[15px] text-nowrap">Sepete Ekle</button>
+               <button class="flex-1 px-4 py-2 bg-green-700 text-white rounded-sm cursor-pointer hover:bg-green-800 transition-all duration-500 text-nowrap  ">Şimdi Al</button>
+             </div>
+            </div>
+           </div> 
+
+           <div class="min-h-[30vh]  bg-white w-[20vw] w-full">
+            <div class="flex justify-between">
+             <p class="text-center text-[9px] font-bold md:text-[11px] bg-[#4c9a9a] p-1 text-white">24 SAATTE<br>KARGODA</p> 
+            <div class="flex gap-3 justify-end items-center">
+             <img src="img/share.png" class="w-[20px] h-[20px] opacity-80">
+             <i class="fa-regular fa-heart fa-lg opacity-35"></i>
+            </div> 
+            </div> 
+            <div class="h-[35vh] w-[100%] my-3">
+            <img src="img/esarp3.jpg" alt="" class="w-[100%] h-[100%] object-contain"> 
+            </div> 
+            <div class="owl-carousel owl-theme bg-[#f9f9f9] text-center p-1 font-bold">
+              <p class="item text-[13px] mt-1 text-nowrap">KARGO BEDAVA</p>
+              <p class="item text-[13px] mt-1 text-nowrap">SEPETTE SÜPRİZ İNDİRİM</p>
+            </div> 
+            <div class="flex flex-col gap-3 justify-center items-center mt-2">
+             <p class="font-light text-[12px]">Fuşya Tivil Eşarp</p>
+             <div class="flex gap-8">
+               <p class="previousPrice line-through text-nowrap text-sm">1.599,00 TL</p>
+               <p class="currentPrice font-bold text-nowrap text-sm ">1.071,00 TL</p>
+             </div>
+             <p class="font-light text-[12px] px-3 py-1 rounded-sm  border border-1 border-green-700 text-green-800 text-nowrap">Sepetteki Fiyatı &nbsp;&nbsp; <span class="basketPrice font-extrabold">599,76 TL</span></p>
+             <div class=" hidden md:block flex flex-col md:flex-row  w-full gap-2 ">
+               <button class="flex-1 px-4 py-2 border border-2 border-[#4c9a9a] text-black rounded-sm cursor-pointer hover:bg-[#3b7878] hover:text-white transition-all duration-500  text-[15px] text-nowrap">Sepete Ekle</button>
+               <button class="flex-1 px-4 py-2 bg-green-700 text-white rounded-sm cursor-pointer hover:bg-green-800 transition-all duration-500 text-nowrap  ">Şimdi Al</button>
+             </div>
+            </div>
+           </div> 
+
+  
+           <div class="min-h-[30vh]  bg-white w-[20vw] w-full">
+            <div class="flex justify-between">
+             <p class="text-center text-[9px] font-bold md:text-[11px] bg-[#4c9a9a] p-1 text-white">24 SAATTE<br>KARGODA</p> 
+            <div class="flex gap-3 justify-end items-center">
+             <img src="img/share.png" class="w-[20px] h-[20px] opacity-80">
+             <i class="fa-regular fa-heart fa-lg opacity-35"></i>
+            </div> 
+            </div> 
+            <div class="h-[35vh] w-[100%] my-3">
+            <img src="img/esarp6.jpg" alt="" class="w-[100%] h-[100%] object-contain"> 
+            </div> 
+            <div class="owl-carousel owl-theme bg-[#f9f9f9] text-center p-1 font-bold">
+              <p class="item text-[13px] mt-1 text-nowrap">KARGO BEDAVA</p>
+              <p class="item text-[13px] mt-1 text-nowrap">SEPETTE SÜPRİZ İNDİRİM</p>
+            </div> 
+            <div class="flex flex-col gap-3 justify-center items-center mt-2">
+             <p class="font-light text-[12px]">Fuşya Tivil Eşarp</p>
+             <div class="flex gap-8">
+               <p class="previousPrice line-through text-nowrap text-sm">1.599,00 TL</p>
+               <p class="currentPrice font-bold text-nowrap text-sm ">1.071,00 TL</p>
+             </div>
+             <p class="font-light text-[12px] px-3 py-1 rounded-sm  border border-1 border-green-700 text-green-800 text-nowrap">Sepetteki Fiyatı &nbsp;&nbsp; <span class="basketPrice font-extrabold">599,76 TL</span></p>
+             <div class=" hidden md:block flex flex-col md:flex-row  w-full gap-2 ">
+               <button class="flex-1 px-4 py-2 border border-2 border-[#4c9a9a] text-black rounded-sm cursor-pointer hover:bg-[#3b7878] hover:text-white transition-all duration-500  text-[15px] text-nowrap">Sepete Ekle</button>
+               <button class="flex-1 px-4 py-2 bg-green-700 text-white rounded-sm cursor-pointer hover:bg-green-800 transition-all duration-500 text-nowrap  ">Şimdi Al</button>
+             </div>
+            </div>
+           </div> 
+
+
+
+        </div>
+    </section>
+    <script>
+        function handleMouseMove(e, id) {
+          const img = document.getElementById(id);
+          const rect = img.getBoundingClientRect();
+          const x = ((e.clientX - rect.left) / rect.width) * 100;
+          const y = ((e.clientY - rect.top) / rect.height) * 100;
+  
+          img.style.transformOrigin = `${x}% ${y}%`;
+          img.style.transform = "scale(2.8)";
+        }
+  
+        function resetPosition(id) {
+          const img = document.getElementById(id);
+          img.style.transformOrigin = "center";
+          img.style.transform = "scale(1)";
+        }
+      </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+  margin: 10,
+  nav: false,
+  dots: false,
+  autoplay: true,
+  autoplayTimeout: 3500, // 2 saniye
+  smartSpeed: 900,         // Geçiş 1 saniyede olsun (yumuşak geçiş)
+  
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      }
+    }
+  });
+</script>
+
+<script>
+  $('.owlBanner.owl-carousel').owlCarousel({
+    loop: true,
+  margin: 10,
+  nav: false,
+  dots: false,
+  autoplay: true,
+  autoplayTimeout: 8000,
+    autoplaySpeed: 4000,        // Otomatik geçiş yumuşaklığı (ms)
+    smartSpeed: 1000,  
+  
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      }
+    }
+  });
+</script>
+
+
+
+    <!-- 
 
 
     <script>
@@ -194,76 +812,75 @@
     </script> -->
 
 
-<script>
-    let filter = false;
-    let filterArrow = document.getElementById("filterArrow");
-    let productFilter = document.getElementById("productFilter");
-    let arrowBtnFilter = document.getElementById("arrowBtnFilter");
-    filterArrow.addEventListener("click",()=>{
-        if(filter){
-            productFilter.classList.remove("xl:w-85","w-50");
-            productFilter.classList.add("xl:w-8", "w-0");
-            arrowBtnFilter.classList.remove("rotate-180");
-            filterArrow.classList.add("-right-7");
-            filterArrow.classList.remove("-right-3");
+    <script>
+        let filter = false;
+        let filterArrow = document.getElementById("filterArrow");
+        let productFilter = document.getElementById("productFilter");
+        let arrowBtnFilter = document.getElementById("arrowBtnFilter");
+        filterArrow.addEventListener("click", () => {
+            if (filter) {
+                productFilter.classList.remove("xl:w-85", "w-50");
+                productFilter.classList.add("xl:w-8", "w-0");
+                arrowBtnFilter.classList.remove("rotate-180");
+                filterArrow.classList.add("-right-7");
+                filterArrow.classList.remove("-right-3");
 
-            filter=false;
-          
-        }
-        else{
-            productFilter.classList.remove("xl:w-8", "w-0");
-            productFilter.classList.add("xl:w-85","w-50");
-            filterArrow.classList.remove("-right-7");
-            filterArrow.classList.add("-right-3");
-            arrowBtnFilter.classList.add("rotate-180");
+                filter = false;
 
-         
-            filter=true;
-        }
-     
-    })
-</script>
+            }
+            else {
+                productFilter.classList.remove("xl:w-8", "w-0");
+                productFilter.classList.add("xl:w-85", "w-50");
+                filterArrow.classList.remove("-right-7");
+                filterArrow.classList.add("-right-3");
+                arrowBtnFilter.classList.add("rotate-180");
 
 
+                filter = true;
+            }
+
+        })
+    </script>
 
 
 
 
 <script>
-    var sentences = ["Eşarpta Stil, Kalite ve Güvenin Buluşma Noktası.", "15 Yıldır Şıklığın ve Zarafetin Yanındayız."];
-
-    var sentenceIndex = 0;
-    var currentSentence = '';
-    var sentenceElement = document.getElementById("sentence");
-
+    const sentences = [
+      "Eşarpta Stil, Kalite ve Güvenin Buluşma Noktası.",
+      "15 Yıldır Şıklığın ve Zarafetin Yanındayız."
+    ];
+  
+    let sentenceIndex = 0;
+    const sentenceElements = document.querySelectorAll(".sentence");
+  
     function typeWriter() {
-        if (sentenceIndex < sentences.length) {
-            currentSentence = sentences[sentenceIndex];
-            sentenceElement.innerHTML = '';
-
-            var i = 0;
-            var typingInterval = setInterval(function () {
-                sentenceElement.innerHTML += currentSentence.charAt(i);
-                i++;
-
-                if (i === currentSentence.length) {
-                    clearInterval(typingInterval);
-                    setTimeout(function () {
-                        sentenceElement.innerHTML = '';
-                        sentenceIndex++;
-                        if (sentenceIndex === sentences.length) {
-                            sentenceIndex = 0;
-                        }
-                        typeWriter();
-                    }, 2000);
-                }
-            }, 100);
-        }
+      if (sentenceIndex < sentences.length) {
+        const currentSentence = sentences[sentenceIndex];
+        sentenceElements.forEach(el => el.innerHTML = '');
+  
+        let i = 0;
+        const typingInterval = setInterval(function () {
+          sentenceElements.forEach(el => el.innerHTML += currentSentence.charAt(i));
+          i++;
+  
+          if (i === currentSentence.length) {
+            clearInterval(typingInterval);
+            setTimeout(function () {
+              sentenceElements.forEach(el => el.innerHTML = '');
+              sentenceIndex++;
+              if (sentenceIndex === sentences.length) {
+                sentenceIndex = 0;
+              }
+              typeWriter();
+            }, 2000);
+          }
+        }, 100);
+      }
     }
-
-    typeWriter();</script>
-
-
+  
+    typeWriter();
+</script>
 
 
 
